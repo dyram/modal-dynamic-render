@@ -1,0 +1,57 @@
+{
+  "id": "customer-stepper-modal",
+  "name": "customer-privacy-preference",
+  "associatedGroupID": "customer-privacy-preference",
+  "type": "@ivoyant/componentStepperModal",
+  "params": {
+    "triggerDetails": {
+      "triggerIcon": "MobileOutlined",
+      "triggerText": "Privacy Preferences",
+      "size": "large",
+      "type": "primary"
+    },
+    "modalDetails": {
+      "modalTitle": "Set Privacy Preference",
+      "maskClosable": false,
+      "footer": null
+    },
+    "stepperDetails": {
+      "direction": "horizontal",
+      "progressDot": true,
+      "intermediaryText": "Approve",
+      "doneText": "Done",
+      "steps": [
+        {
+          "title": "Choose Preference",
+          "hasForm": true,
+          "content": "Select your preference to opt in or out of recieving marketing mails.",
+          "layout": "horizontal",
+          "formMeta": {
+            "columns": 1,
+            "fields": {
+              "key": "preference",
+              "widget": "radio-group",
+              "options": [
+                { "value": "opt-in", "label": "Opt-in" },
+                { "value": "opt-out", "label": "Opt-out" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Confirmation",
+          "hasForm": false,
+          "content": "Are you sure you want your preference to be changed?"
+        },
+        {
+          "title": "Confirm",
+          "hasForm": false,
+          "content": "NOOOOOO"
+        }
+      ]
+    }
+  },
+  "childComponents": [],
+  "queries": [],
+  "rootNode": true
+}
